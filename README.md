@@ -5,7 +5,17 @@ A Python-based toolkit for cleaning and organizing North Indian Classical Music 
 This project is built on uv.
 
 ### Run code
-make
+```bash
+    make
+```
 
-Alternative:
-uv run src/main.py
+Alternative option:
+```bash
+    uv run src/main.py
+```
+
+### Run test suite
+```bash
+    make test
+```
+
