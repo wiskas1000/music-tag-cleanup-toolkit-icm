@@ -1,6 +1,7 @@
 # Project-wide Makefile
 # Variables
-PYTHON := uv run python
+UV := uv run
+PYTHON := $(UV) python
 SRC_DIR := src
 MAIN := $(SRC_DIR)/main.py
 TESTS := tests
@@ -60,9 +61,9 @@ help:
 # build:
 # 	uv run python src/main.py
 #
-# # Run pytest
-# test:
-# 	$(PYTHON) pytest
+# Run pytest
+test:
+	$(UV) pytest
 #
 # # Build Sphinx documentation
 # docs:
