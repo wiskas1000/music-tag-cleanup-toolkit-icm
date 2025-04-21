@@ -7,4 +7,9 @@ requires-python = ">=3.12"
 dependencies = [
     "mutagen>=1.47.0",
     "pathlib>=1.0.1",
+    "python-dotenv>=1.1.0",
+    "typer[all]>=0.15.2",
 ]
+  
+[project.scripts]
+mtc = "music_tag_cleanup_toolkit.cli:app"
