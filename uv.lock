@@ -47,7 +47,7 @@ wheels = [
 [[package]]
 name = "music-tag-cleanup-toolkit-icm"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "mutagen" },
     { name = "pathlib" },

@@ -13,3 +13,6 @@ dependencies = [
   
 [project.scripts]
 mtc = "music_tag_cleanup_toolkit.cli:app"
+
+[tool.uv]
+package = true

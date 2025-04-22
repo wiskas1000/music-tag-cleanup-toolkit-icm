@@ -3,13 +3,14 @@
 UV := uv run
 PYTHON := $(UV) python
 SRC_DIR := src
-MAIN := $(SRC_DIR)/main.py
+MAIN := $(SRC_DIR)/music_tag_cleanup_toolkit/cli.py
 TESTS := tests
 DOCS_DIR := docs
 
 # Run the main script
 run:
-	@$(PYTHON) $(MAIN)
+	# @$(PYTHON) $(MAIN)
+	@$(UV) mtc --help
 
 # # Install dependencies
 # install:
@@ -58,8 +59,8 @@ help:
 # # Install dependencies via uv
 # # install:
 # # 	uv install --no-root
-# build:
-# 	uv run python src/main.py
+build:
+	uv sync
 #
 # Run pytest
 test:
