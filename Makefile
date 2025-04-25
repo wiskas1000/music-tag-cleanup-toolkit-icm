@@ -10,7 +10,7 @@ DOCS_DIR := docs
 # Run the main script
 run:
 	# @$(PYTHON) $(MAIN)
-	@$(UV) mtc --help
+	@$(UV) mtc
 
 # # Install dependencies
 # install:
