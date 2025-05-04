@@ -16,26 +16,25 @@ def get_env(var_name: str, default: str) -> str:
 
 @app.command()
 def extract(
-    input_dir: str = typer.Option(
+    music_base_dir: str = typer.Option(
         get_env("MUSIC_BASE_DIR", "./data/music"),
         help="Directory containing the music files",
     ),
-    output_file: str = typer.Option(
+    metadata_base_dir: str = typer.Option(
         get_env("METADATA_BASE_DIR", "./data/metadata.json"),
         help="Output JSON file to store metadata",
     ),
 ):
     """Extract metadata from music files and save to JSON."""
-    typer.echo(f"Extracting from: {input_dir}")
-    typer.echo(f"Saving to: {output_file}")
+    typer.echo(f"Extracting from: {music_base_dir}")
+    typer.echo(f"Saving to: {metadata_base_dir}")
     # TODO: implement extract logic
 
 
 @app.command()
 def write(
     input_json: str = typer.Option(..., help="Input JSON with metadata"),
-    target_dir: str = typer.Option(...,
-                                   help="Target directory to write tags to"),
+    target_dir: str = typer.Option(..., help="Target directory to write tags to"),
 ):
     """Write metadata back to music files."""
     typer.echo(f"Loading metadata from: {input_json}")

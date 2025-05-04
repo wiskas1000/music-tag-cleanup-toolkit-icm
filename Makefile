@@ -10,6 +10,8 @@ DOCS_DIR := docs
 # Run the main script
 run:
 	# @$(PYTHON) $(MAIN)
+	@$(UV) mtc extract
+help:
 	@$(UV) mtc
 
 # # Install dependencies
@@ -36,14 +38,14 @@ run:
 # 	@uv run flake8 $(SRC_DIR)
 
 # Display help
-help:
-	@echo "make 					- Basic build, run"
-	@echo "make run       - Run the main Python script"
-	# @echo "make install   - Install dependencies using uv"
-	# @echo "make test      - Run all tests"
-	# @echo "make clean     - Remove cache and temporary files"
-	# @echo "make docs      - Build Sphinx documentation"
-	# @echo "make lint      - Run code style checks with Black and Flake8"
+# help:
+# 	@echo "make 					- Basic build, run"
+# 	@echo "make run       - Run the main Python script"
+# 	@echo "make install   - Install dependencies using uv"
+# 	@echo "make test      - Run all tests"
+# 	@echo "make clean     - Remove cache and temporary files"
+# 	@echo "make docs      - Build Sphinx documentation"
+# 	@echo "make lint      - Run code style checks with Black and Flake8"
 #
 #
 #
