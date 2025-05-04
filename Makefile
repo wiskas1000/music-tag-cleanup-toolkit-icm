@@ -3,13 +3,16 @@
 UV := uv run
 PYTHON := $(UV) python
 SRC_DIR := src
-MAIN := $(SRC_DIR)/main.py
+MAIN := $(SRC_DIR)/music_tag_cleanup_toolkit/cli.py
 TESTS := tests
 DOCS_DIR := docs
 
 # Run the main script
 run:
-	@$(PYTHON) $(MAIN)
+	# @$(PYTHON) $(MAIN)
+	@$(UV) mtc extract
+help:
+	@$(UV) mtc
 
 # # Install dependencies
 # install:
@@ -35,14 +38,14 @@ run:
 # 	@uv run flake8 $(SRC_DIR)
 
 # Display help
-help:
-	@echo "make 					- Basic build, run"
-	@echo "make run       - Run the main Python script"
-	# @echo "make install   - Install dependencies using uv"
-	# @echo "make test      - Run all tests"
-	# @echo "make clean     - Remove cache and temporary files"
-	# @echo "make docs      - Build Sphinx documentation"
-	# @echo "make lint      - Run code style checks with Black and Flake8"
+# help:
+# 	@echo "make 					- Basic build, run"
+# 	@echo "make run       - Run the main Python script"
+# 	@echo "make install   - Install dependencies using uv"
+# 	@echo "make test      - Run all tests"
+# 	@echo "make clean     - Remove cache and temporary files"
+# 	@echo "make docs      - Build Sphinx documentation"
+# 	@echo "make lint      - Run code style checks with Black and Flake8"
 #
 #
 #
@@ -58,8 +61,8 @@ help:
 # # Install dependencies via uv
 # # install:
 # # 	uv install --no-root
-# build:
-# 	uv run python src/main.py
+build:
+	uv sync
 #
 # Run pytest
 test:
