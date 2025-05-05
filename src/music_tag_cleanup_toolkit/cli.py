@@ -2,6 +2,8 @@
 import typer
 import os
 from dotenv import load_dotenv
+from music_tag_cleanup_toolkit.extract_tags.runner import extract_metadata_from_dir
+
 
 app = typer.Typer(
     help="Music Tag Cleanup Toolkit for Indian Classical Music", no_args_is_help=True
@@ -29,6 +31,8 @@ def extract(
     typer.echo(f"Extracting from: {music_base_dir}")
     typer.echo(f"Saving to: {metadata_base_dir}")
     # TODO: implement extract logic
+    print(f"extract")
+    metadata = extract_metadata_from_dir(music_base_dir)
 
 
 @app.command()
